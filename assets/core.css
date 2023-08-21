@@ -1,0 +1,305 @@
+@charset "utf-8";
+/* CSS Document */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+/* ---------------Body---------------- */
+
+body {
+  display: grid;
+  /* Set width: aside main */
+  /* Set height: head main/aside foot */
+  grid-template-rows: 100px auto 100px;
+  /* Layout by row */
+  grid-template-areas:
+    "head head"
+    "main main"
+    "foot foot";
+  color: #fff;
+  font-family: "Lato", sans-serif;
+}
+
+/*---------------END OF Body ---------------*/
+
+/* ---------------Text markups---------------- */
+
+/*---------------END OF Text Markups ---------------*/
+
+/*---------------Navigation--------------- */
+header {
+  grid-area: head;
+  background-color: #212121;
+  padding-top: 0px;
+  position: sticky;
+  top: 0;
+  z-index: +300;
+}
+
+header ul {
+  list-style: none;
+}
+
+header a {
+  display: flex;
+  float: left;
+  list-style: none;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 35px;
+}
+header a:hover {
+  text-decoration: underline;
+  transform: scale(1.1);
+  transition: 0.1s;
+}
+
+html.sr .listz {
+  visibility: hidden;
+}
+
+.active-page {
+  color: #7798b3;
+}
+/*---------------END OF Navigation--------------- */
+
+/*---------------Main--------------- */
+main {
+  grid-area: main;
+  /* Set min height to 3 page heights */
+  min-height: 100vh;
+
+  background-color: #181818;
+}
+
+#posts article {
+  display: flex;
+}
+
+#posts article:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+#posts h2 {
+  text-decoration: underline;
+}
+
+.reslink {
+  color: rgb(179, 179, 85);
+}
+
+.content a {
+  color: rgb(179, 179, 85);
+}
+
+.button {
+  background-color: #7798b3;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+
+
+/* animation for the button from w3schools https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate1 */
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/*---------------END OF Main--------------- */
+
+/*---------------Images--------------- */
+
+img {
+  max-width: 600px;
+  transition: 0.75s;
+}
+
+.content,
+.images {
+  padding: 30px;
+  font-size: 24px;
+}
+
+/*---------------END OF Images--------------- */
+
+/*---------------Hero--------------- */
+#hero {
+  background-image: url("images/background.jpg");
+  background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/background.jpg");
+  min-height: 70vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+}
+
+#hero h1 {
+  font-size: 100px;
+  color: #ffffff;
+}
+
+/*---------------END OF hero--------------- */
+
+/*-----------------QUIZ-------------------- */
+
+#quizhero {
+  background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("images/test.jpg");
+  min-height: 30vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+}
+
+#quizhero h1 {
+  font-size: 100px;
+  color: #ffffff;
+}
+
+.quiz{
+    font-size:x-large;
+    margin: 15px 15px 15px 15px;
+    padding: 10px 10px 10px 10px;
+    max-width: 100%;
+    background-color: #353434;
+    
+}
+
+#q1a{
+  color: red;
+}
+
+#quizid{
+  font-size: 100px;
+  text-align: center;
+  color: white;
+}
+
+#submitbutton {
+  background-color: #7798b3;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-left: 47%;
+  transition:0.5s;
+}
+
+#submitbutton:hover{
+  background-color: #4792cf;
+  transition:0.5s;
+}
+
+#output{
+  font-size: 30px;
+  color: #7798b3;
+}
+
+
+/* animation for the button from w3schools https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate1 */
+
+
+
+/*--------------END OF QUIZ --------------- */
+
+/* ---------------Footer--------------- */
+footer {
+  grid-area: foot;
+  background-color: #212121;
+  text-align: center;
+  padding-top: 13px;
+}
+
+footer a{
+  color: rgb(179, 179, 85);
+}
+
+/*---------------End of Footer---------------*/
+/*---------------Media queries---------------*/
+@media screen and (max-width: 800px) {
+
+
+
+  body {
+    /* Set width: aside main */
+    grid-template-columns: 1fr;
+    /* Set height: head main/aside foot */
+    grid-template-rows: 100px 200px 1fr 100px;
+    /* Layout by row */
+    grid-template-areas:
+      "head"
+      "main"
+      "foot";
+  }
+}
+
+
+@media screen and (max-width:1000px){
+
+  .images{
+    display:none;
+  }
+
+  .listz{
+    display:flex;
+
+
+  }
+
+  .content{
+    width:100%;
+    
+  }
+  
+  #posts article {
+    display: flex;
+}
+
+}
