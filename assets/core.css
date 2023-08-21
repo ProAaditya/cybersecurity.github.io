@@ -162,8 +162,8 @@ img {
 
 /*---------------Hero--------------- */
 #hero {
-  background-image: url("images/background.jpg");
-  background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/background.jpg");
+  background-image: url("images/pic1.jpg");
+  background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/pic1.jpg");
   min-height: 70vh;
   background-position: center;
   background-repeat: no-repeat;
