@@ -177,6 +177,16 @@ img {
   color: #ffffff;
 }
 
+#hero h2 {
+  font-size: 70px;
+  color: #ffffff;
+}
+
+#hero p {
+  font-size: 25px;
+  color: #ffffff;
+}
+
 /*---------------END OF hero--------------- */
 
 /*-----------------QUIZ-------------------- */
