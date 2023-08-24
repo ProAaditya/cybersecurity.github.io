@@ -65,7 +65,7 @@ html.sr .listz {
 }
 
 .active-page {
-  color: #7798b3;
+  color: #00f2ff;
 }
 /*---------------END OF Navigation--------------- */
 
@@ -73,7 +73,6 @@ html.sr .listz {
 main {
   grid-area: main;
   /* Set min height to 3 page heights */
-  min-height: 100vh;
 
   background-color: #181818;
 }
@@ -170,22 +169,49 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
-  place-items: center;
+  place-items: auto;
 }
 
 #hero h1 {
   font-size: 100px;
   color: #ffffff;
+  text-align: center;
 }
 
 #hero h2 {
   font-size: 70px;
   color: #ffffff;
+  text-align: center;
+}
+
+#hero h3 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 25px;
+}
+
+#hero h4 {
+  text-align: left;
+  color: #ffffff;
+  font-size: 25px;
 }
 
 #hero p {
   font-size: 25px;
   color: #ffffff;
+  text-align: center;
+}
+
+#hero a {
+  color: #ffffff;
+  text-decoration: none;
+  text-align: left;
+}
+
+#hero .blogs {
+  color: #ffffff;
+  text-align: center;
+  font-size: 35px;
 }
 
 /*---------------END OF hero--------------- */
@@ -199,10 +225,49 @@ footer {
 }
 
 footer a{
-  color: rgb(179, 179, 85);
+  color: rgb(0, 204, 255);
+  text-decoration: none;
 }
 
 /*---------------End of Footer---------------*/
+
+/*Start Of About */
+
+#about h3 {
+  color: #ffffff;
+  text-align: center;
+}
+
+#about h4 {
+  color: #ffffff;
+  text-align: left;
+  font-size: larger;
+}
+
+#about h6 {
+  color: #ffffff;
+  text-align: left;
+  font-size: medium;
+}
+
+/*End Of About*/
+
+/*Start Of Blogs */
+
+#blogs h4 {
+  color: #ffffff;
+  text-align: left;
+  font-size: larger;
+}
+
+#blogs h6 {
+  color: #ffffff;
+  text-align: left;
+  font-size: large;
+}
+
+/*End Of Blogs*/
+
 /*---------------Media queries---------------*/
 @media screen and (max-width: 800px) {
 
